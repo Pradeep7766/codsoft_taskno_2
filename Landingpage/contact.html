@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact-ClassyFootwear</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <nav id="desktop-nav">
+        <div class="logo">
+            <h1>ClassyFootwear</h1>
+        </div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home </a></li>
+                <li><a href="#">Product </a></li>
+                <li><a href="aboutus.html">About us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        </nav>
+        
+        
+        <!-- Responsive Navigation -->
+        <nav id="sidenav">
+        <div class="logo">
+            ClassyFootwear
+        </div>
+        <div class="sidenav-menu">
+            <div class="sidenav-menu-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="sidenav-menu-links">
+                <li><a href="index.html" onclick="toggleMenu()">Home </a></li>
+                <li><a href="#" onclick="toggleMenu()">Product </a></li>
+                <li><a href="aboutus.html" onclick="toggleMenu()">About us </a></li>
+                <li><a href="contact.html" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+        </nav>
+
+
+
+    <section id="contact">
+        <div class="contact-container">         
+            <div class="contact-left-detail">
+    
+                <h1  style="text-align: left;font-size: 50px;font-weight: bold;color: #0F172A;" class="contact-title">Contact me</h1>
+    
+                <p style="font-weight: bold; "><Strong>Gmail</Strong>:</p>
+                <p >contacttclassyfootwear@gmail.com</p>
+                <p style="font-weight: bold;"> <strong>Phone No:</strong></p>
+                <p>+91-1234567890</p>
+                <br>
+                
+                
+            </div>
+            <div class="contact-right-detail">
+                <p class="para">Direct message </p>
+                <form id="contact-form" method="POST" class="contact-form">
+                
+                    <input type="text" id="fname" name="fname" placeholder="Your Firstname *" required>
+    
+                    <input type="text" id="lname" name="lname" placeholder="Your Lastname *" required>
+    
+                    <input type="email" id="email" name="email" placeholder="Your email *" required>
+    
+                    <textarea name="message" id="message" rows="6" placeholder="Your message..." required></textarea>
+    
+                    <button type="button" class="submit-btn" onclick="sendMail()">Submit</button>
+    
+                    <p id="response-msg" style="margin-top: 10px;"></p>
+                    
+                </form>
+            </div> 
+    
+        </div>
+    </section>
+    
+    <footer>
+    <p >© 2025 <b>ClassyFootwear</b> all rights are reserved | Privacy Policy |</p>
+    </footer>
+   
+
+
+    <!-- javascrip file -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript"> (
+    function()
+        { emailjs.init({publicKey: "VvUK2JGPOI8PiU2gk",});})();
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>

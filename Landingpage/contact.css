@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+background-color: #F8F8F8;
+}
+
+
+a {
+font-weight: 600;
+color: #ffffff; 
+text-decoration: none;
+position: relative;
+display: inline-block;
+transition: transform 0.3s ease, color 0.2s ease;
+}
+
+a:hover {
+color: #a590ff; 
+transform: translateY(-7px);
+}
+
+.logo {
+color: #ffffff; 
+padding-top: 10px;
+}
+
+nav, .nav-links {
+display: flex;
+align-items: center;
+}
+
+nav {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+justify-content: space-between;
+z-index: 1000;
+background-color: #1b1b1b;
+height: 15vh;
+padding: 0 1rem;
+}
+
+.nav-links {
+gap: 4rem;
+list-style: none;
+font-size: 1.3rem;
+}
+
+#sidenav {
+display: none;
+}
+
+.sidenav-menu {
+position: relative;
+display: inline-block;
+}
+
+.sidenav-menu-icon {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+height: 24px;
+width: 30px;
+cursor:none;
+}
+
+.sidenav-menu-icon span {
+width: 100%;
+height: 4px;
+background: #ffffff; 
+transition: 0.3s ease-in-out;
+}
+
+.sidenav-menu-links {
+position: fixed;
+top: 60px;
+right: 0;
+background: #1b1b1b; /* Black */
+width: 100vw;
+padding: 0;
+margin: 0;
+max-height: 0;
+overflow: hidden;
+text-align: center;
+font-size: 1.2rem;
+transition: 0.3s ease-in-out;
+z-index: 999;
+}
+
+.sidenav-menu-links li {
+list-style: none;
+margin: 1rem 0;
+}
+
+.sidenav-menu-links.Open {
+max-height: 500px;
+padding: 50px 0;
+margin-top: 40px;
+}
+
+.sidenav-menu-icon.Open span:first-child {
+transform: rotate(46deg) translate(9px, 5px);
+}
+
+.sidenav-menu-icon.Open span:nth-child(2) {
+opacity: 0;
+}
+
+.sidenav-menu-icon.Open span:last-child {
+transform: rotate(-46deg) translate(9px, -5px);
+}
+
+/* contact */
+#contact {
+    padding: 10rem 1rem 6rem;
+    }
+    
+    .contact-title {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: #0F172A;
+    margin-bottom: 40px;
+    }
+    
+    .contact-container {
+        padding: 0 1rem;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 5rem; 
+        max-width: 1200px;
+    }
+
+    .contact-left-detail,
+    .contact-right-detail {
+    flex: 1;
+    min-width: 300px;
+    }
+    
+    .contact-left-detail p {
+    font-size: 16px;
+    color: #0f172a;
+    }
+    
+    .contact-right-detail form {
+    display: flex;
+    flex-direction: column;
+    }
+    
+    .contact-right-detail input,
+    .contact-right-detail textarea {
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #585858;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    }
+    
+    .submit-btn {
+    background-color: #000000;
+    color: white;
+    font-size: 15px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px rgba(5, 1, 1, 0.397);
+    }
+    
+    .submit-btn:hover {
+    color: #000000;
+    background-color: #a590ff;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(5, 1, 1, 0.397);
+    }
+
+footer {
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .contact-container {
+        gap: 3rem;
+    }
+
+    .contact-title {
+        font-size: 42px;
+    }
+}
+
+
+
+  @media screen and (max-width: 786px) {
+    #desktop-nav {
+    display: none;
+    }
+    
+    #sidenav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 18vh;
+    padding-top:none;
+    }
+    
+    .sidenav-menu-icon {
+    margin-right: 1rem;
+    }
+    
+    .sidenav-menu-links {
+    top: 100px;
+    width: 100vw;
+    height: auto;
+    font-size: 1.2rem;
+    }
+    
+    .sidenav-menu-links li {
+    margin: 1rem 0;
+    }
+    
+    .sidenav-menu-links.Open {
+    background-color: #1b1b1b;
+    max-height: 500px;
+    padding: 10px 0;
+    }
+    
+
+
+  /* Contact */
+#contact{
+    padding: 10rem 0 6rem;
+}
+.contact-container {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.contact-title {
+    text-align: center;
+    font-size: 32px;
+}
+
+.contact-left-detail,
+.contact-right-detail {
+    width: 100%;
+}
+
+.contact-right-detail input,
+.contact-right-detail textarea {
+    font-size: 15px;
+    width: 100%;
+}
+
+.submit-btn {
+    font-size: 16px;
+}
+
+.footerr{
+    padding: 0.5rem 0 0.5rem;
+font-size: 12px;
+text-align: center;
+letter-spacing: 1px;
+}
+}
